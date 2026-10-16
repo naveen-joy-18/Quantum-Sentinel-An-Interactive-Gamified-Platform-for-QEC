@@ -1,0 +1,13 @@
+services:
+  quantum-sentinel:
+    build: .
+    ports:
+      - "${SENTINEL_PORT:-8000}:8000"
+    environment:
+      SENTINEL_RESULTS: /app/results/runs.csv
+    volumes:
+      - ./results:/app/results
+      - ./figures:/app/figures
+    restart: unless-stopped
+    mem_limit: 4g
+    cpus: 2.0

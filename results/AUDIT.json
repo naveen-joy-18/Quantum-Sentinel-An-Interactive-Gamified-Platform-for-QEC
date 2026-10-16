@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "rows": 4944,
+  "problems": [],
+  "warnings": [],
+  "noise_rates": [
+    0.01,
+    0.04,
+    0.08
+  ],
+  "circuit_seeds": 8,
+  "protected_rows": 4080
+}

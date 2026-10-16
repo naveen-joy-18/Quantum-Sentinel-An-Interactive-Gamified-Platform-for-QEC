@@ -1,0 +1,75 @@
+{
+  "parameters": {
+    "shots": 2048,
+    "ns": [
+      4,
+      5,
+      6
+    ],
+    "depths": [
+      3,
+      6,
+      10
+    ],
+    "t_counts": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "seeds": [
+      19,
+      23,
+      41,
+      53,
+      71,
+      73,
+      89,
+      101
+    ],
+    "p2": [
+      0.01,
+      0.04,
+      0.08
+    ],
+    "readout": 0.01,
+    "max_checks": 3,
+    "max_orders": 10,
+    "exhaustive": false
+  },
+  "versions": {
+    "qiskit": "2.5.2",
+    "qiskit-aer": "0.17.2",
+    "qiskit-paulice": "0.2.1"
+  },
+  "python": "3.11.9",
+  "noise_spec": "2-qubit depolarising p2 on cz/cx + symmetric readout bit-flip r; single-qubit gates ideal (both selection and sampling engines)",
+  "search_scope": "ordered target subsets of the defined payload/algorithm, with transparent coverage; no claim of global check-placement optimum",
+  "search_coverage_by_width": {
+    "4": {
+      "evaluated_order_count": 10,
+      "candidate_order_count": 40,
+      "complete_order_enumeration": false
+    },
+    "5": {
+      "evaluated_order_count": 10,
+      "candidate_order_count": 85,
+      "complete_order_enumeration": false
+    },
+    "6": {
+      "evaluated_order_count": 10,
+      "candidate_order_count": 156,
+      "complete_order_enumeration": false
+    }
+  },
+  "skipped_combinations": [],
+  "organizer_noise_verified": false,
+  "metrics": {
+    "conditional_fidelity": "normalised squared Bhattacharyya overlap of postselected distribution with ideal",
+    "yield_fraction": "retention * conditional_fidelity: defined composite utility, not probability of correct shots",
+    "yield_ratio": "composite utility relative to unprotected baseline; >1 means utility improvement, not literal throughput",
+    "error_suppression": "(1-baseline_fidelity)/(1-conditional_fidelity)",
+    "shot_cost_ratio": "attempted-shot cost of postselected estimator / baseline estimator for MSE eps^2=0.0001 on a Z-type observable, including bias"
+  },
+  "uncertainty": "primary intervals are computed across circuit instances (seeds) in src.analysis; retention carries a per-shot Wilson interval"
+}

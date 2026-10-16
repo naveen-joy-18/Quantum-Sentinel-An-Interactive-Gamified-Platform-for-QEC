@@ -396,7 +396,7 @@ Quantum-Sentinel/
 ├── start_server.bat            # One-click Windows backend launcher
 ├── README.md                   # Primary documentation
 ├── Recorded_Presentation_Video.mov # Presentation Video
-└── Written_Report.docx             # Report of the Project
+└── Written_Report.pdf             # Report of the Project
 ```
 
 ---
